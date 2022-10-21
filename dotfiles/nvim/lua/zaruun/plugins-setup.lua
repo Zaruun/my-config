@@ -37,6 +37,9 @@ return packer.startup(function(use)
 
 	use("szw/vim-maximizer") -- maximizes and restores current window
 
+	-- commenting with gc
+	use("numToStr/Comment.nvim")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
