@@ -5,5 +5,5 @@ sh -c "$(wget https://raw.githubusercontent.com/Zaruun/my-config/main/scripts/nv
 
 ### Install Advance Configuration
 ```
-sh -c "$(wget https://raw.githubusercontent.com/Zaruun/my-config/main/scripts/nvim/nvim-install.config.sh -O -)"
+sh -c "$(wget https://raw.githubusercontent.com/Zaruun/my-config/main/scripts/nvim/nvim-install-config.sh -O -)"
 ```
