@@ -1,2 +1,1 @@
-# my-config
- All my configurations
+# All my configuration in one place
