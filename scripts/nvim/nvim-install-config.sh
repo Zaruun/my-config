@@ -2,7 +2,8 @@
 
 git clone https://github.com/zaruun/my-config
 
-if [ ! -d ~/.config/nvim ] then
+if [ ! -d ~/.config/nvim ] 
+then
     mkdir ~/.config
     mkdir ~/.config/nvim
 fi
