@@ -24,7 +24,7 @@ sudo rm -f ./nvim-linux64.deb
 
 echo 'NeoVim 0.8.0 installed successfully!'
 
-
+mkdir .config
 git clone https://github.com/zaruun/my-config
 
 rm -rf ~/.config/nvim
