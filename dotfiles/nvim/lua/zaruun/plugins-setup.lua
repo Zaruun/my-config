@@ -40,6 +40,13 @@ return packer.startup(function(use)
 	-- commenting with gc
 	use("numToStr/Comment.nvim")
 
+  -- fuzzy finding w/ telescope
+	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
+	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
+
+  -- statusline
+	use("nvim-lualine/lualine.nvim")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
