@@ -15,3 +15,7 @@ Tools:
 - tmux
 - neofetch
 - mc
+- cmake 
+- make 
+- gcc 
+- clang

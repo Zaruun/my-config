@@ -14,3 +14,4 @@ sudo apt install -y neofetch
 
 sudo apt install -y mc
 
+sudo apt install -y cmake make gcc clang
