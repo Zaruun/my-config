@@ -82,6 +82,12 @@ lspconfig["tailwindcss"].setup({
 	on_attach = on_attach,
 })
 
+-- configure jedi server
+lspconfig["jedi_language_server"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
 -- configure lua server (with special settings)
 lspconfig["sumneko_lua"].setup({
 	capabilities = capabilities,
