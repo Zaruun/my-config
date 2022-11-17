@@ -14,4 +14,6 @@ sudo apt install -y neofetch
 
 sudo apt install -y mc
 
-sudo apt install -y cmake make gcc clang
+sudo apt install -y xclip
+
+sudo apt install -y cmake make gcc clang g++ 
