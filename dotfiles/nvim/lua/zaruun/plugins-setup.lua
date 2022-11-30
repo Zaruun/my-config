@@ -55,6 +55,9 @@ return packer.startup(function(use)
 	-- vs-code like icons
 	use("kyazdani42/nvim-web-devicons")
 
+	-- harpoon
+	use("ThePrimeagen/harpoon")
+
 	-- statusline
 	use("nvim-lualine/lualine.nvim")
 
