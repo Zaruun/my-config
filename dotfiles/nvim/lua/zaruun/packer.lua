@@ -67,6 +67,9 @@ return packer.startup(function(use)
   -- toggleterm
   use('akinsho/toggleterm.nvim')
 
+  -- vs-code like icons
+	use('kyazdani42/nvim-web-devicons')
+
   -- LSP
   use {
     'VonHeikemen/lsp-zero.nvim',
