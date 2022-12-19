@@ -66,6 +66,9 @@ return packer.startup(function(use)
 
   -- toggleterm
   use('akinsho/toggleterm.nvim')
+  
+  -- vim-css-color
+  use('norcalli/nvim-colorizer.lua')
 
   -- vs-code like icons
 	use('kyazdani42/nvim-web-devicons')
