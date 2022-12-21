@@ -12,6 +12,9 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- paste over text w/o copying replacing text
 vim.keymap.set("x", "<leader>p", '"_dP')
 
+-- change highlighted text w/o copying
+vim.keymap.set("x", "c", '"_dP')
+
 -- replace current word in file
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
@@ -29,14 +32,14 @@ vim.keymap.set("n", "<leader>+", "<C-a>") -- increment
 vim.keymap.set("n", "<leader>-", "<C-x>") -- decrement
 
 -- copy to clipboard (microsoft)
--- vim.cmd([[
--- if system('uname -r') =~ "microsoft"
---   augroup Yank
---   autocmd!
---   autocmd TextYankPost * :call system('/mnt/c/windows/system32/clip.exe ',@")
---   augroup END
--- endif
--- ]])
+vim.cmd([[
+if system('uname -r') =~ "microsoft"
+  augroup Yank
+  autocmd!
+  autocmd TextYankPost * :call system('/mnt/c/windows/system32/clip.exe ',@")
+  augroup END
+endif
+]])
 
 -- window management
 vim.keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
@@ -45,6 +48,4 @@ vim.keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width & 
 vim.keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
 
 -- formatting
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
-
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
