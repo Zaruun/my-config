@@ -49,3 +49,4 @@ vim.keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
 
 -- formatting
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+vim.keymap.set("n", "<leader>sf", ":%s/\\s\\+$//e") -- remove unwanted spaces
