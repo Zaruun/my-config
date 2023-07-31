@@ -1,5 +1,5 @@
 # Variables
-$buildFile = '.\config.ps1'
+$buildFile = '.\script.ps1'
 
 # Check if build file exist and delete 
 if (Test-Path $buildFile) {
@@ -17,6 +17,13 @@ function AddContentFromFile ($file) {
 function AddContentFromString ($string) {
     Add-Content -Path $buildFile -Value " "
     Add-Content -Path $buildFile -Value "$string"
+}
+
+# Function to add content from .ps1 script output
+function AddContentFromScript ($file) {
+    Add-Content -Path $buildFile -Value " "
+    $scriptOutput = $file | Invoke-Expression 
+    Add-Content -Path $buildFile -Value $scriptOutput -Encoding UTF8
 }
 
 function ConsoleLog($desc, $color="Cyan") {
@@ -41,6 +48,12 @@ AddContentFromFile .\scripts\winget-uninstall.ps1
 
 ConsoleLog "✅ Install by Winget"
 AddContentFromFile .\scripts\winget-install.ps1
+
+ConsoleLog "✅ Powermgmt settings"
+AddContentFromFile .\scripts\powermgmt.ps1
+
+ConsoleLog "✅ Regedit settings"
+AddContentFromScript .\scripts\regedit.ps1
 
 ConsoleLog ""
 ConsoleLog "🏁 Done." "Magenta"

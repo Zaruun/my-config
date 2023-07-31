@@ -1,43 +1,43 @@
 # Install programs by winget
 
 #Browsers
-winget install -e --id Google.Chrome 
-winget install -e --id Mozilla.Firefox
-winget install -e --id Brave.Brave
+winget install -e --accept-source-agreements --accept-package-agreements --silent --id Google.Chrome 
+winget install -e --accept-source-agreements --accept-package-agreements --silent --id Mozilla.Firefox
+winget install -e --accept-source-agreements --accept-package-agreements --silent --id Brave.Brave
 
 # PDF
-winget install -e --id geeksoftwareGmbH.PDF24Creator
-winget install -e --id Adobe.Acrobat.Reader.32-bit
+winget install -e --accept-source-agreements --accept-package-agreements --silent --id geeksoftwareGmbH.PDF24Creator
+winget install -e --accept-source-agreements --accept-package-agreements --silent --id Adobe.Acrobat.Reader.32-bit
 
 # IDE
-winget install -e --id Microsoft.VisualStudioCode
-winget install -e --id Microsoft.VisualStudio.2022.Community
+winget install -e --accept-source-agreements --accept-package-agreements --silent --id Microsoft.VisualStudioCode
+winget install -e --accept-source-agreements --accept-package-agreements --silent --id Microsoft.VisualStudio.2022.Community
 
 # VPN
-winget install -e --id WireGuard.WireGuard
-winget install -e --id Cloudflare.Warp
+winget install -e --accept-source-agreements --accept-package-agreements --silent --id WireGuard.WireGuard
+winget install -e --accept-source-agreements --accept-package-agreements --silent --id Cloudflare.Warp
 
 # Microsoft
-winget install -e --id Microsoft.Office
-winget install -e --id Microsoft.Teams
-winget install -e --id Microsoft.SQLServerManagementStudio
-winget install -e --id Microsoft.PowerToys
-winget install -e --id Microsoft.WindowsTerminal
+winget install -e --accept-source-agreements --accept-package-agreements --silent --id Microsoft.Office
+winget install -e --accept-source-agreements --accept-package-agreements --silent --id Microsoft.Teams
+winget install -e --accept-source-agreements --accept-package-agreements --silent --id Microsoft.SQLServerManagementStudio
+winget install -e --accept-source-agreements --accept-package-agreements --silent --id Microsoft.PowerToys
+winget install -e --accept-source-agreements --accept-package-agreements --silent --id Microsoft.WindowsTerminal
 
 # Password Managers
-winget install -e --id Bitwarden.Bitwarden
-winget install -e --id DominikReichl.KeePass
+winget install -e --accept-source-agreements --accept-package-agreements --silent --id Bitwarden.Bitwarden
+winget install -e --accept-source-agreements --accept-package-agreements --silent --id DominikReichl.KeePass
 
 # Work
-winget install -e --id Devolutions.RemoteDesktopManager
-winget install -e --id Insecure.Nmap
-winget install -e --id WinSCP.WinSCP
-winget install -e --id LSoftTechnologies.ActiveDiskImage
-winget install -e --id 7zip.7zip
+winget install -e --accept-source-agreements --accept-package-agreements --silent --id Devolutions.RemoteDesktopManager
+winget install -e --accept-source-agreements --accept-package-agreements --silent --id Insecure.Nmap
+winget install -e --accept-source-agreements --accept-package-agreements --silent --id WinSCP.WinSCP
+winget install -e --accept-source-agreements --accept-package-agreements --silent --id LSoftTechnologies.ActiveDiskImage
+winget install -e --accept-source-agreements --accept-package-agreements --silent --id 7zip.7zip
 
 # Everythink else
-winget install -e --id alexx2000.DoubleCommander
-winget install -e --id DeepL.DeepL
-winget install -e --id Greenshot.Greenshot
-winget install -e --id PuTTY.PuTTY
-winget install -e --id Docker.DockerDesktop
+winget install -e --accept-source-agreements --accept-package-agreements --silent --id alexx2000.DoubleCommander
+winget install -e --accept-source-agreements --accept-package-agreements --silent --id DeepL.DeepL
+winget install -e --accept-source-agreements --accept-package-agreements --silent --id Greenshot.Greenshot
+winget install -e --accept-source-agreements --accept-package-agreements --silent --id PuTTY.PuTTY
+winget install -e --accept-source-agreements --accept-package-agreements --silent --id Docker.DockerDesktop
