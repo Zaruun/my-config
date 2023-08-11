@@ -39,7 +39,6 @@ function AddContentFromFileToReadme {
     $content = Get-Content -Path $file
     $content | Out-File -FilePath $buildReadme -Append -Encoding UTF8
     Add-Content -Path $buildReadme -Value '```'
-
 }
 
 # Function to add content from script .ps1 output to Readme.md as code with custome title
@@ -57,7 +56,6 @@ function AddContentFromScriptToReadme {
     $scriptOutput = $file | Invoke-Expression 
     Add-Content -Path $buildReadme -Value $scriptOutput -Encoding UTF8
     Add-Content -Path $buildReadme -Value '```'
-
 }
 
 function ConsoleLog($desc, $color="Cyan") {
@@ -72,6 +70,10 @@ Add-Content -Path $buildFile -Value "# Script created by build.ps1 - any changes
 Add-Content -Path $buildFile -Value "#=============================================================="
 
 Add-Content -Path $buildReadme -Value "# Windows configuration commands"
+
+ConsoleLog "✅ Set dark theme"
+AddContentFromFile .\scripts\theme-dark.ps1
+AddContentFromFileToReadme -f .\scripts\theme-dark.ps1 -t "Set dark theme"
 
 ConsoleLog "✅ Update PowerShell to lastes version"
 AddContentFromFile .\scripts\updatePowershell.ps1

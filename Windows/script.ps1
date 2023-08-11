@@ -2,6 +2,9 @@
 # Script created by build.ps1 - any changes will be overwriten 
 #==============================================================
  
+# Set dark theme
+start-process -filepath "C:\Windows\Resources\Themes\dark.theme"
+ 
 # Update PowerShell to lastest by Microsoft Script
 iex "& { $(irm https://aka.ms/install-powershell.ps1) } -UseMSI -Quiet"
  

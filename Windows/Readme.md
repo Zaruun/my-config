@@ -1,18 +1,27 @@
 # Windows configuration commands
+### Set dark theme
+```powershell
+# Set dark theme
+start-process -filepath "C:\Windows\Resources\Themes\dark.theme"
+```
+ 
 ### Update Powershell to lastes version
 ```powershell
 # Update PowerShell to lastest by Microsoft Script
 iex "& { $(irm https://aka.ms/install-powershell.ps1) } -UseMSI -Quiet"
 ```
+ 
 ### Install WSL and Ubuntu 22.04
 ```powershell
 # Install WSL and Ubuntu 22.04
 wsl --install -d Ubuntu-22.04
 ```
+ 
 ### Restart Computer
 ```powershell
 Restart-Computer
 ```
+ 
 ### Uninstall by Winget
 ```powershell
 winget list
@@ -29,6 +38,7 @@ winget uninstall "Xbox Game Bar”
 winget uninstall "Xbox Identity Provider”
 winget uninstall "Xbox Game Speech Window”
 ```
+ 
 ### Install by Winget
 ```powershell
 # Install programs by winget
@@ -75,6 +85,7 @@ winget install -e --accept-source-agreements --accept-package-agreements --silen
 winget install -e --accept-source-agreements --accept-package-agreements --silent --id PuTTY.PuTTY
 winget install -e --accept-source-agreements --accept-package-agreements --silent --id Docker.DockerDesktop
 ```
+ 
 ### Powermgmt settings
 ```powershell
 # lid close action when on battery
@@ -92,8 +103,10 @@ powercfg -SetActive SCHEME_CURRENT
 # 2	Hibernate
 # 3	Shut down
 ```
+ 
 ### Regedit settings
 ```powershell
 # FastStartupDisable
 Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Power' -Name HiberbootEnabled -Value 0
 ```
+ 
