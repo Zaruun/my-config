@@ -1,3 +1,4 @@
+winget list
 # Uninstall (PL language)
 
 winget uninstall "MSN Pogoda”

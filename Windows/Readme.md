@@ -1,13 +1,20 @@
-#==============================================================
-# Script created by build.ps1 - any changes will be overwriten 
-#==============================================================
- 
+# Windows configuration commands
+### Update Powershell to lastes version
+```powershell
 # Update PowerShell to lastest by Microsoft Script
 iex "& { $(irm https://aka.ms/install-powershell.ps1) } -UseMSI -Quiet"
- 
+```
+### Install WSL and Ubuntu 22.04
+```powershell
 # Install WSL and Ubuntu 22.04
 wsl --install -d Ubuntu-22.04
- 
+```
+### Restart Computer
+```powershell
+Restart-Computer
+```
+### Uninstall by Winget
+```powershell
 winget list
 # Uninstall (PL language)
 
@@ -21,7 +28,9 @@ winget uninstall "Xbox Game Bar Plugin”
 winget uninstall "Xbox Game Bar”
 winget uninstall "Xbox Identity Provider”
 winget uninstall "Xbox Game Speech Window”
- 
+```
+### Install by Winget
+```powershell
 # Install programs by winget
 
 #Browsers
@@ -65,7 +74,9 @@ winget install -e --accept-source-agreements --accept-package-agreements --silen
 winget install -e --accept-source-agreements --accept-package-agreements --silent --id Greenshot.Greenshot
 winget install -e --accept-source-agreements --accept-package-agreements --silent --id PuTTY.PuTTY
 winget install -e --accept-source-agreements --accept-package-agreements --silent --id Docker.DockerDesktop
- 
+```
+### Powermgmt settings
+```powershell
 # lid close action when on battery
 powercfg -setdcvalueindex SCHEME_CURRENT 4f971e89-eebd-4455-a8de-9e59040e7347 5ca83367-6e45-459f-a27b-476b1d01c936 1
 
@@ -80,6 +91,9 @@ powercfg -SetActive SCHEME_CURRENT
 # 1	Sleep
 # 2	Hibernate
 # 3	Shut down
- 
+```
+### Regedit settings
+```powershell
 # FastStartupDisable
 Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Power' -Name HiberbootEnabled -Value 0
+```
