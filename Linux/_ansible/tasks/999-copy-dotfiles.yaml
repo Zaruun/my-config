@@ -1,0 +1,7 @@
+- name: Copy .zshrc
+  copy:
+    src: ../dotfiles/zshrc/.zshrc
+    dest: "/home/{{ current_user.stdout }}/."
+    owner: "{{ current_user.stdout }}"
+    group: "{{ current_user.stdout }}"
+    mode: 0644
