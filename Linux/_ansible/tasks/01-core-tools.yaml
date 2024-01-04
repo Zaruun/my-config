@@ -11,5 +11,9 @@
     - build-essential
     - git
     - cmake
+    - make
     - clang
     - gcc 
+    - ninja-build
+    - gettext
+    - unzip
