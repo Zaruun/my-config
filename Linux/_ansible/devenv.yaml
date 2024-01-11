@@ -20,5 +20,6 @@
     - include: tasks/04-nodejs.yaml
     - include: tasks/05-python.yaml
 
+    - include: tasks/998-copy-scripts.yaml
     - include: tasks/999-copy-dotfiles.yaml
     
