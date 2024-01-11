@@ -18,6 +18,7 @@
 #         path: /tmp/install-miniconda.sh
   
 - name: Install pip and virtualenv
+  become: true
   apt:
     name: "{{ item }}"
     state: latest
