@@ -17,10 +17,13 @@ target_dir="$HOME/$random_name"
 
 mkdir -p "$target_dir"
 
-sshfs "$server" "$target_dir"
-
-nvim "$target_dir"
-
-fusermount -u "$target_dir"
-
-rmdir "$target_dir"
+if sshfs "$server" "$target_dir"; then
+    echo "Mounted successfully."
+    nvim "$target_dir"
+    fusermount -u "$target_dir"
+    rmdir "$target_dir"
+else
+    echo "Mounting failed. Check for errors above."
+    rmdir "$target_dir"
+    exit 1
+fi
