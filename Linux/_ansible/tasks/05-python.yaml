@@ -25,4 +25,6 @@
   loop:
     - python3-pip
     - python3-venv
-    - pytube
+
+- name: Install pytube
+  command: python3 -m pip install pytube
