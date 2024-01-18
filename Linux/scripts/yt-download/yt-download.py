@@ -27,7 +27,7 @@ while True:
 
         i = 1
         for video in pl.videos:
-            print(f"{i} - {video.title}")
+            print(f"({i}/{len(pl.video_urls)}) {video.title}")
             video.streams.get_highest_resolution().download(filename=f"{i} - {video.title}.mp4")
             i += 1
         print("Download completed!!")
