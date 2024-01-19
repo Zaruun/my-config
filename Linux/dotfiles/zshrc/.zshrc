@@ -123,3 +123,4 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 alias n="nvim"
 alias nssh="sh ~/.config/scripts/nvim-sshfs/nvim-sshfs.sh"
 alias ytd="python3 ~/.config/scripts/yt-download/yt-download.py"
+alias updater="#script_path_to_replace"
