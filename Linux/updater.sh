@@ -38,4 +38,4 @@ echo ""
 ansible-playbook -i localhost _ansible/devenv.yaml --ask-become-pass
 
 # Update .zshrc updater.sh path to alias
-sed -i "s|#script_path_to_replace|sh $(pwd)/updater.sh|" ~/.zshrc
+sed -i "s|#script_path_to_replace|cd $(pwd) \&\& sh $(pwd)/updater.sh|" ~/.zshrc
