@@ -2,7 +2,7 @@
 ---
 
 ```bash
-sh updater.sh
+updater
 ```
 
 Load nvm
