@@ -130,3 +130,6 @@ updater() {
   #script_path_to_replace
   cd $p
 }
+
+# disable hightlight colors in wsl folders 
+LS_COLORS=$LS_COLORS:'ow=1;34:' ; export LS_COLORS
