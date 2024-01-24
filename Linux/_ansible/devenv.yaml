@@ -1,0 +1,25 @@
+---
+- name: Configure my personal development environment
+  hosts: localhost
+  gather_facts: false
+
+  tasks:
+    - name: Retrieve current user
+      command: whoami
+      register: current_user
+
+    - name: Update packages
+      become: true
+      apt:
+        update_cache: yes
+        upgrade: yes
+
+    - include: tasks/01-core-tools.yaml
+    - include: tasks/02-oh-my-zsh.yaml  
+    - include: tasks/03-nvim.yaml
+    - include: tasks/04-nodejs.yaml
+    - include: tasks/05-python.yaml
+
+    - include: tasks/998-copy-scripts.yaml
+    - include: tasks/999-copy-dotfiles.yaml
+    

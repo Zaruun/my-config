@@ -1,0 +1,30 @@
+- name: Check if nvm is installed
+  stat:
+    path: "/home/{{ current_user.stdout }}/.nvm}}"
+  register: nvm_stats
+
+- name: Install nvm
+  ansible.builtin.shell: >
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+  args:
+    creates: "/home/{{ current_user.stdout }}/.nvm/nvm.sh"
+  become_user: "{{ current_user.stdout }}"
+  when: nvm_stats.stat.exists == False
+  register: nvm_install
+
+- name: Set NVM_DIR environment variable
+  set_fact:
+    nvm_dir: "{{ lookup('env', 'HOME') + '/.nvm' }}"
+  when: lookup('env', 'XDG_CONFIG_HOME') is not defined
+
+- name: Set NVM_DIR environment variable when XDG_CONFIG_HOME is defined
+  set_fact:
+    nvm_dir: "{{ lookup('env', 'XDG_CONFIG_HOME') + '/nvm' }}"
+  when: lookup('env', 'XDG_CONFIG_HOME') is defined
+
+- name: Install node
+  become_user: "{{ current_user.stdout }}"
+  shell: "source /home/{{ current_user.stdout }}/.nvm/nvm.sh && nvm install node"                                 
+  args:
+    executable: /bin/bash
+  when: nvm_install.changed == True

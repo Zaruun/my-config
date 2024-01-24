@@ -1,0 +1,4 @@
+- name: Copy scripts
+  copy:
+    src: ../scripts/
+    dest: "/home/{{ current_user.stdout }}/.config/scripts/"
