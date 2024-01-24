@@ -18,4 +18,4 @@
     - gettext
     - unzip
     - sshfs
-    - batcat
+    - bat
