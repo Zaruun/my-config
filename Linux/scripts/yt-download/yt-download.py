@@ -27,8 +27,13 @@ while True:
 
         i = 1
         for video in pl.videos:
-            print(f"({i}/{len(pl.video_urls)}) {video.title}")
-            video.streams.get_highest_resolution().download(filename=f"{i} - {video.title}.mp4")
+            try:
+                print(f"({i}/{len(pl.video_urls)}) {video.title}")
+                video.streams.get_highest_resolution().download(filename=f"{i} - {video.title}.mp4")
+            except:
+                print("")
+                print(f"Download error - ({i}/{len(pl.video_urls)}) {video.title}")
+                print("")
             i += 1
         print("Download completed!!")
     elif choice == "q":
