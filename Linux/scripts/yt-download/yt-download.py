@@ -14,9 +14,12 @@ while True:
         yt = YouTube(url)
         print("Title: ", yt.title)
         ys = yt.streams.get_highest_resolution()
+        print("")
         print("Downloading...")
+        print("")
         ys.download()
         print("Download completed!!")
+        print("")
     elif choice == "2":
         url = input("Enter the URL of the playlist: ")
         pl = Playlist(url)
@@ -36,5 +39,6 @@ while True:
                 print("")
             i += 1
         print("Download completed!!")
+        print("")
     elif choice == "q":
         break
