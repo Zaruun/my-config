@@ -20,6 +20,12 @@
     - sshfs
     - bat
 
+- name: make /tmp/ripgrep dir
+  become: true
+  file:
+    path: "/tmp/ripgrep"
+    state: directory 
+
 - name: Get ripgrep 
   become: true
   command: "curl -LO https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb"
@@ -35,4 +41,4 @@
   become: true
   file:
     path: "/tmp/ripgrep"
- 
+    state: absent
