@@ -10,7 +10,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     lazy = false,
     opts = {
-      ensure_installed = { "lua_ls", "html", "tailwindcss", "tsserver" },
+      ensure_installed = { "lua_ls", "html", "tailwindcss", "tsserver", "astro" },
       auto_install = true,
     },
   },
@@ -39,6 +39,10 @@ return {
       })
 
       lspconfig.tailwindcss.setup({
+        capabilities = capabilities
+      })
+
+      lspconfig.astro.setup({
         capabilities = capabilities
       })
 
