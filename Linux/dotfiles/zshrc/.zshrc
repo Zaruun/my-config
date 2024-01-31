@@ -128,7 +128,22 @@ alias cat="batcat"
 # FUNCTIONS
 updater() {
   p=$(pwd)
-  #script_path_to_replace
+  if [ -n "$1" ]; then
+      case "$1" in
+          -t)
+              if [ -n "$2" ]; then
+                  #script_path_to_replace -t "$2"
+              else
+                  echo "Please specify a tag."
+              fi
+              ;;
+          *)
+              echo "Invalid tag: $1"
+              ;;
+      esac
+  else
+      #script_path_to_replace 
+  fi
   cd $p
 }
 
