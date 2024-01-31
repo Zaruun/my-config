@@ -48,7 +48,7 @@ fi
 # Update .zshrc updater.sh path to alias
 #sed -i "s|#script_path_to_replace|cd $(pwd) \&\& bash $(pwd)/updater.sh|" ~/.zshrc
 
-cat <<EOF | sed -i "s"|#script_path_to_replace|cd $(pwd)
+cat <<EOF | sed -i 's|#script_path_to_replace|cd $(pwd)
   if [ "$1" == "-t" ]; then
     if [ -n "$2" ]; then
       bash $(pwd)/updater.sh -t "$2"
@@ -58,7 +58,7 @@ cat <<EOF | sed -i "s"|#script_path_to_replace|cd $(pwd)
   else
     bash $(pwd)/updater.sh
   fi
-  fi|" ~/.zshrc
+  |' ~/.zshrc
   
 EOF
 
