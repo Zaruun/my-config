@@ -7,6 +7,8 @@
     - name: Retrieve current user
       command: whoami
       register: current_user
+      tags:
+      - nvim 
 
     - name: Update packages
       become: true

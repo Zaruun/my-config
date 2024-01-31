@@ -34,8 +34,16 @@ EOF
 git pull
 
 echo ""
-# Run Ansible playbook
-ansible-playbook -i localhost _ansible/devenv.yaml --ask-become-pass
+if [ "$1" == "-t" ]; then
+    if [ -n "$2" ]; then
+      ansible-playbook -i localhost _ansible/devenv.yaml --ask-become-pass --tags $2
+    else
+        echo "With -t parameter you need to specify tag name."
+    fi
+else
+  ansible-playbook -i localhost _ansible/devenv.yaml --ask-become-pass
+fi
+
 
 # Update .zshrc updater.sh path to alias
 sed -i "s|#script_path_to_replace|cd $(pwd) \&\& sh $(pwd)/updater.sh|" ~/.zshrc
