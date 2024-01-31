@@ -138,7 +138,7 @@ updater() {
               fi
               ;;
           *)
-              echo "Invalid option: $1"
+              echo "Invalid tag: $1"
               ;;
       esac
   else
