@@ -130,7 +130,7 @@ updater() {
   p=$(pwd)
   if [ "$1" == "-t" ]; then
     if [ -n "$2" ]; then
-      #script_path_to_replace_with_tag
+      #script_path_to_replace -t "$2"
     else
       echo "Please specify tag"
     fi
