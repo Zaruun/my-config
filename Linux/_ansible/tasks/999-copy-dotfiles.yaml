@@ -5,6 +5,9 @@
     owner: "{{ current_user.stdout }}"
     group: "{{ current_user.stdout }}"
     mode: 0644
+  tags:
+  - zsh
+  - scripts
 
 - name: Copy nvim
   copy:

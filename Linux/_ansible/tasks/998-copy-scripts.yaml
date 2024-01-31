@@ -2,3 +2,5 @@
   copy:
     src: ../scripts/
     dest: "/home/{{ current_user.stdout }}/.config/scripts/"
+  tags:
+  - scripts

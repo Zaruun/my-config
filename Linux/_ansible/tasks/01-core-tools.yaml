@@ -20,3 +20,5 @@
     - sshfs
     - bat
     - ripgrep
+  tags:
+  - core

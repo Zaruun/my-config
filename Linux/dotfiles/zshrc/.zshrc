@@ -134,7 +134,7 @@ updater() {
               if [ -n "$2" ]; then
                   #script_path_to_replace -t "$2"
               else
-                  echo "Please specify a tag."
+                  echo "Please specify a tag. ( core / scripts / nvim / zsh )"
               fi
               ;;
           *)
