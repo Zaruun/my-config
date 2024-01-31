@@ -46,8 +46,8 @@ fi
 
 
 # Update .zshrc updater.sh path to alias
-#sed -i "s|#script_path_to_replace|cd $(pwd) \&\& bash $(pwd)/updater.sh|" ~/.zshrc
-sed -i "s|#script_path_to_replace|cd $(pwd); if [ \"\$1\" == \"-t\" ]; then if [ -n \"\$2\" ]; then bash $(pwd)/updater.sh -t \"\$2\"; else echo \"With -t parameter you need to specify tag name.\"; fi; else bash $(pwd)/updater.sh; fi|" ~/.zshrc
+sed -i "s|#script_path_to_replace|cd $(pwd) \&\& bash $(pwd)/updater.sh|"
+sed -i "s|#script_path_to_replace2|cd $(pwd) \&\& bash $(pwd)/updater.sh -t \"\$1\"|"
   
 cat <<EOF
 

@@ -128,7 +128,14 @@ alias cat="batcat"
 # FUNCTIONS
 updater() {
   p=$(pwd)
-  #script_path_to_replace
+  if [ "$1" == "-t" ]; then
+    if [ -n "$2" ]; then
+      #script_path_to_replace_with_tag
+    else
+      echo "Please specify tag"
+    fi
+      #script_path_to_replace
+  fi
   cd $p
 }
 
