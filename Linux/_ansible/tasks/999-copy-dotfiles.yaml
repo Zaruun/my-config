@@ -1,4 +1,4 @@
-- name: Copy .zshrc
+- name: Copy zsh config
   copy:
     src: ../dotfiles/zshrc/.zshrc
     dest: "/home/{{ current_user.stdout }}/."
@@ -9,7 +9,7 @@
   - zsh
   - scripts
 
-- name: Copy nvim
+- name: Copy nvim config
   copy:
     src: ../dotfiles/nvim
     dest: "/home/{{ current_user.stdout }}/.config/"
@@ -18,3 +18,13 @@
     mode: 0644
   tags:
   - nvim
+
+- name: Copy tmux config
+  copy:
+    src: ../dotfiles/tmux/.tmux.config
+    dest: "/home/{{ current_user.stdout }}/"
+    owner: "{{ current_user.stdout }}"
+    group: "{{ current_user.stdout }}"
+    mode: 0644
+  tags:
+  - tmux

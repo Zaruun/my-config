@@ -11,6 +11,7 @@
       - nvim 
       - scripts
       - zsh
+      - tmux
 
     - name: Update packages
       become: true
