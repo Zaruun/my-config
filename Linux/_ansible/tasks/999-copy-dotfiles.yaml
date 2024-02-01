@@ -21,7 +21,7 @@
 
 - name: Copy tmux config
   copy:
-    src: ../dotfiles/tmux/.tmux.config
+    src: ../dotfiles/tmux/.tmux.conf
     dest: "/home/{{ current_user.stdout }}/"
     owner: "{{ current_user.stdout }}"
     group: "{{ current_user.stdout }}"
