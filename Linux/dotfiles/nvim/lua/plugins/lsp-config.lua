@@ -1,5 +1,5 @@
-local lsp_servers = { "lua_ls", "html", "tailwindcss", "tsserver", "astro" }
-local formatters = { "stylua", "jq", "prettier" }
+local lsp_servers = { "lua_ls", "html", "tailwindcss", "tsserver", "astro", "bashls" }
+local formatters = { "stylua", "jq", "prettier", "shfmt" }
 return {
 	{
 		{
