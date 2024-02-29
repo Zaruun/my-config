@@ -1,6 +1,6 @@
 - name: Check if powershell is installed
   stat:
-    path: "/usr/bin/nvim"
+    path: "/usr/bin/pwsh"
   register: pwsh_stats
 
 - name: Download Pwsh7.deb 
