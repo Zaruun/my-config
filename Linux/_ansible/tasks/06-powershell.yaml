@@ -1,16 +1,24 @@
+- name: Check if powershell is installed
+  stat:
+    path: "/usr/bin/nvim"
+  register: pwsh_stats
+
 - name: Download Pwsh7.deb 
   get_url:
     url: https://github.com/PowerShell/PowerShell/releases/download/v7.4.1/powershell_7.4.1-1.deb_amd64.deb
     dest: /tmp/pwsh7.deb
+  when: nvim_stats.stat.exists == False
 
 - name: Install pwsh package
   become: true
   apt:
     deb: "/tmp/pwsh7.deb"
+  when: nvim_stats.stat.exists == False
 
 - name: Clean up pwsh install files
   become: true
   file:
     path: "/tmp/pwsh7.deb"
     state: absent
+  when: nvim_stats.stat.exists == False
 
