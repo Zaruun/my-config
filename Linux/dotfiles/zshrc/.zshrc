@@ -124,6 +124,8 @@ alias n="nvim"
 alias nssh="sh ~/.config/scripts/nvim-sshfs/nvim-sshfs.sh"
 alias ytd="python3 ~/.config/scripts/yt-download/yt-download.py"
 alias cat="batcat"
+alias cd="z"
+alias cdi="zi"
 
 # FUNCTIONS
 updater() {
@@ -147,7 +149,7 @@ updater() {
   cd $p
 }
 
-eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init zsh)"
 
 # disable hightlight colors in wsl folders 
 LS_COLORS=$LS_COLORS:'ow=1;34:' ; export LS_COLORS
