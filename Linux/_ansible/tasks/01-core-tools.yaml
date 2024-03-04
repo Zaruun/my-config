@@ -20,5 +20,6 @@
     - sshfs
     - bat
     - ripgrep
+    - zoxide
   tags:
   - core
