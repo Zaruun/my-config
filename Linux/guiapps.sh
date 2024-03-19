@@ -24,5 +24,5 @@ for file in "${files[@]}"; do
 done
 
 for file in "${to_install[@]}"; do
-    ./$file
+    bash ./$file
 done
