@@ -2,23 +2,27 @@
 
 dir="./guiapps"
 cd $dir
+
 files=(*)
+to_install=()
 
 for file in "${files[@]}"; do
     read -rp "Should I run \"$file\" ? [y/n]: " answer
+    echo ""
     case $answer in 
         [Yy]* )
-            echo ""
-            echo "Running $file"
-            bash "$dir/$file"
+            to_install+=($file)
+            echo "$file will be runned"
             ;;
         [Nn]* )
-            echo ""
             echo "Skipping $file"
             ;;
         * )
-            echo ""
             echo "Wrong anwswer"
             ;;
     esac
+done
+
+for file in "${to_install[@]}"; do
+    ./$file
 done
