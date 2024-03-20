@@ -12,6 +12,7 @@
       - scripts
       - zsh
       - tmux
+      - dotfiles
 
     - name: Update packages
       become: true

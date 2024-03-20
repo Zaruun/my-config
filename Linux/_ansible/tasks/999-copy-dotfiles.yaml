@@ -8,6 +8,7 @@
   tags:
   - zsh
   - scripts
+  - dotfiles
 
 - name: Copy nvim config
   copy:
@@ -18,6 +19,7 @@
     mode: 0644
   tags:
   - nvim
+  - dotfiles
 
 - name: Copy tmux config
   copy:
@@ -28,3 +30,15 @@
     mode: 0644
   tags:
   - tmux
+  - dotfiles
+
+- name: Copy tmux config
+  copy:
+    src: ../dotfiles/alacritty
+    dest: "/home/{{ current_user.stdout }}/.config/"
+    owner: "{{ current_user.stdout }}"
+    group: "{{ current_user.stdout }}"
+    mode: 0644
+  tags:
+  - dotfiles
+  - alacritty
