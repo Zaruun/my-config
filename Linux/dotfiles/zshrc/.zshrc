@@ -124,6 +124,7 @@ alias n="nvim"
 alias nssh="sh ~/.config/scripts/nvim-sshfs/nvim-sshfs.sh"
 alias ytd="python3 ~/.config/scripts/yt-download/yt-download.py"
 alias cat="batcat"
+alias open="wslview"
 
 # FUNCTIONS
 updater() {
