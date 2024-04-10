@@ -31,6 +31,7 @@
     - include: tasks/07-go.yaml
     - include: tasks/08-rust.yaml
     - include: tasks/09-wsltools.yaml
+    - include: tasks/10-cargo-install-tools.yaml
 
     - include: tasks/998-copy-scripts.yaml
     - include: tasks/999-copy-dotfiles.yaml
