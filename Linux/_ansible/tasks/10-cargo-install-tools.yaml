@@ -8,8 +8,13 @@
   when: lsd_stats.stat.exists == False
 
 - name: Copy LSD-rs to /usr/bin/
-  become: true
   copy:
     src: "/home/{{ current_user.stdout }}/.cargo/bin/lsd"
-    dest: "/usr/bin/lsd"
+    dest: "/home/{{ current_user.stdout }}/.local/bin/lsd"
+  when: lsd_stats.stat.exists == False
+
+- name: Clean up LSD-rs install files
+  file:
+    path: "/home/{{ current_user.stdout }}/.cargo/bin/lsd"
+    state: absent
   when: lsd_stats.stat.exists == False
