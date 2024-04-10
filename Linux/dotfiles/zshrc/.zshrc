@@ -127,7 +127,7 @@ alias cat="batcat"
 alias open="wslview"
 alias ls="lsd"
 alias ll="lsd -la"
-alias ll="lsd --tree"
+alias tree="lsd --tree"
 
 # FUNCTIONS
 updater() {
