@@ -11,6 +11,7 @@
   copy:
     src: "/home/{{ current_user.stdout }}/.cargo/bin/lsd"
     dest: "/home/{{ current_user.stdout }}/.local/bin/lsd"
+    mode: a+x
   when: lsd_stats.stat.exists == False
 
 - name: Clean up LSD-rs install files
