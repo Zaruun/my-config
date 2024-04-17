@@ -1,6 +1,6 @@
 - name: Check if LSD-rs is installed
   stat:
-    path: "/home/{{ current_user.stdout }}/.local/bin/lsd"
+    path: "/usr/bin/lsd"
   register: lsd_stats
 
 - name: Install LSD-rs ( ls replacment )
