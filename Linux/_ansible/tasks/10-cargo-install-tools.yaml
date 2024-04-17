@@ -3,7 +3,7 @@
     path: "/usr/bin/lsd"
   register: lsd_stats
 
-- name: Install LSD-rs ( ls replacment )
+- name: Build LSD-rs ( ls replacment )
   ansible.builtin.command: cargo install lsd
   when: lsd_stats.stat.exists == False
 
