@@ -10,7 +10,7 @@
 - name: Copy LSD-rs to /usr/bin/
   copy:
     src: "/home/{{ current_user.stdout }}/.cargo/bin/lsd"
-    dest: "/home/{{ current_user.stdout }}/.local/bin/lsd"
+    dest: "/usr/bin/lsd"
     mode: a+x
   when: lsd_stats.stat.exists == False
 
