@@ -8,6 +8,7 @@
   when: lsd_stats.stat.exists == False
 
 - name: Copy LSD-rs to /usr/bin/
+  become: true
   copy:
     src: "/home/{{ current_user.stdout }}/.cargo/bin/lsd"
     dest: "/usr/bin/lsd"
