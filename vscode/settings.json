@@ -1,0 +1,40 @@
+{
+  "workbench.sideBar.location": "right",
+  "editor.minimap.enabled": false,
+  "editor.fontFamily": "SauceCodePro Nerd Font",
+  "workbench.colorTheme": "GitHub Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.activityBar.location": "top",
+  "emmet.includeLanguages": {
+    "django-html": "html"
+  },
+  "editor.stickyScroll.enabled": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "remote.autoForwardPortsSource": "hybrid",
+  "codeium.enableConfig": {
+    "*": true,
+    "django-html": true
+  },
+  "vscode-neovim.highlightGroups.highlights": {
+
+    "IncSearch": {
+      "backgroundColor": "theme.editor.findMatchBackground",
+      "borderColor": "theme.editor.findMatchBorder"
+    },
+    "CurSearch": {
+      "backgroundColor": "theme.editor.findMatchBackground",
+      "borderColor": "theme.editor.findMatchBorder"
+    },
+    "Search": {
+      "backgroundColor": "theme.editor.findMatchHighlightBackground",
+      "borderColor": "theme.editor.findMatchHighlightBorder"
+    }
+  },
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "vscode-neovim.neovimInitVimPaths.win32": "c:\\priv\\init.lua",
+  "editor.lineNumbers": "relative",
+}
