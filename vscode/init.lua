@@ -21,8 +21,10 @@ if vim.g.vscode then
     vim.keymap.set("v", ">", ">gv")
 
     vim.keymap.set("n", "<leader>v", ":lua require('vscode-neovim').call('workbench.action.splitEditor')<CR>")
-    vim.keymap.set("n", "<leader>h", ":lua require('vscode-neovim').call('workbench.action.focusFirstEditorGroup')<CR>")
-    vim.keymap.set("n", "<leader>l", ":lua require('vscode-neovim').call('workbench.action.focusLastEditorGroup')<CR>")
+    -- vim.keymap.set("n", "<leader>h", ":lua require('vscode-neovim').call('workbench.action.focusFirstEditorGroup')<CR>")
+    -- vim.keymap.set("n", "<leader>l", ":lua require('vscode-neovim').call('workbench.action.focusLastEditorGroup')<CR>")
+    vim.keymap.set("n", "<C-h>", ":lua require('vscode-neovim').call('workbench.action.navigateLeft')<CR>")
+    vim.keymap.set("n", "<C-l>", ":lua require('vscode-neovim').call('workbench.action.navigateRight')<CR>")
 
     vim.keymap.set("n", "<leader>1", ":lua require('vscode-neovim').call('workbench.action.openEditorAtIndex1')<CR>")
     vim.keymap.set("n", "<leader>2", ":lua require('vscode-neovim').call('workbench.action.openEditorAtIndex2')<CR>")
