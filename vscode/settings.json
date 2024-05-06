@@ -36,5 +36,7 @@
     "asvetliakov.vscode-neovim": 1
   },
   "vscode-neovim.neovimInitVimPaths.win32": "c:\\priv\\init.lua",
-  "editor.lineNumbers": "relative"
+  "editor.lineNumbers": "relative",
+  "workbench.startupEditor": "none",
+  "window.restoreWindows": "none"
 }
