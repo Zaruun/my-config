@@ -16,3 +16,4 @@
  asvetliakov.vscode-neovim
  Vue.volar
  ms-vscode-remote.remote-wsl
+ wayou.vscode-todo-highlight

@@ -22,5 +22,6 @@
     - ripgrep
     - zoxide
     - xclip
+    - ranger
   tags:
   - core

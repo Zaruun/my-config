@@ -1,0 +1,16 @@
+[
+	{
+		"name": "my-config",
+		"rootPath": "vscode-remote://wsl+ubuntu-22.04/home/zaruun/code/my-config",
+		"paths": [],
+		"tags": [],
+		"enabled": true
+	},
+	{
+		"name": "scripts-tools",
+		"rootPath": "c:\\priv\\scripts-tools",
+		"paths": [],
+		"tags": [],
+		"enabled": true
+	}
+]
