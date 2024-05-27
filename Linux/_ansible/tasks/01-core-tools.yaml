@@ -23,5 +23,6 @@
     - zoxide
     - xclip
     - ranger
+    - fzf
   tags:
   - core

@@ -70,7 +70,7 @@ ZSH_THEME="bureau"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git fzf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -117,6 +117,11 @@ source $ZSH/oh-my-zsh.sh
 # nvm init
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# fzf config
+
+export FZF_DEFAULT_OPTS="--height=60% --layout=reverse --info=inline --preview 'cat {}' --border --margin=1 --padding=1"
+
 
 
 # ALSIAS
